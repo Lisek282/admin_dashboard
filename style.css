@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+  --board-search-color: #cbd5e1;
+  --sidebar-btn-color: #38bdf8;
+}
 
 .container{
   width: 100vw;
@@ -11,16 +19,17 @@
 }
 
 .sidebar{
-  background-color: #38bdf8;
+  background-color: var(--sidebar-btn-color);
   grid-area: 1/1/3/2;
   color: white;
-  padding: 10px;
+  padding: 20px;
 }
 
 .nav{
   display: grid;
   grid-template-rows: repeat(12, 40px);
   align-items: center;
+  list-style-type: none;
 }
 
 .logo{
@@ -34,15 +43,83 @@
 }
 
 .header{
+  padding: 10px 40px;
   background-color: white;
+  grid-area: 1/2/2/3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.search_bar{
+  grid-area: 1/1/2/2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search_bar img{
+  width: 30px;
+}
+
+.search_bar input{
+  width: 80%;
+  line-height: 2;
+  border-radius: 20px;
+  background-color: var(--board-search-color);
+  border: none;
+  padding-left: 10px;
+}
+
+.user{
   grid-area: 1/2/2/3;
 }
 
+.user img{
+  width: 30px;
+}
+
+.user_header{
+  grid-area: 2/1/3/2;
+}
+
+.action_buttons{
+  grid-area: 2/2/3/3;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1em;
+}
+
+.btn{
+  background-color: var(--sidebar-btn-color);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  font-family: inherit;
+}
+
 .board{
-  background-color: #f5f5f5;
+  background-color: var(--board-search-color);
   grid-area: 2/2/3/3;
 }
 
+.logo,
+.link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
+.logo svg,
+.link svg{
+  width: 1em;
+  fill: white;
+}
 
 
